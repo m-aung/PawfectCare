@@ -12,7 +12,10 @@
     "testDebug": "jest -o --watch --coverage=false",
     "testFinal": "jest",
     "updateSnapshots": "jest -u --coverage=false",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "build:web": "expo export:web",
+    "build:android": "eas build --platform android",
+    "build:ios": "eas build --platform ios"
   },
   "dependencies": {
     "@apollo/client": "^3.13.5",

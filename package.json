@@ -5,8 +5,7 @@
   "author": "m-aung <myoa86g@gmail.com>",
   "license": "MIT",
   "private": true,
-  "dependencies": {
-    "@pawfetcare/client": "^0.1.0",
-    "@pawfetcare/server": "^0.1.0"
-  }
+  "workspaces": [
+    "packages/*"
+  ]
 }

@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/80dbd085-0f88-4dd9-895f-b68608f97d9c/deploy-status)](https://app.netlify.com/sites/pawfect-care-app/deploys)

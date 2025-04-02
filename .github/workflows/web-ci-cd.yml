@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    name: Run Tests
+    name: Run Tests for Web
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
     steps:

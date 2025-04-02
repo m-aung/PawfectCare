@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Pawfect-Care",
+    "slug": "pawfect-care",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/playstore-icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/paw-1.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/playstore-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/ic_launcher-web.png"
+    }
+  }
+}

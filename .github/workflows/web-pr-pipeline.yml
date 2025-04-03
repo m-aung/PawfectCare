@@ -55,7 +55,7 @@ jobs:
       - name: Check for changes in web
         id: changes
         run: |
-          git fetch origin ${{ github.base_ref }} -- packages/web --depth=1
+          git fetch origin ${{ github.base_ref }} --depth=1
           git diff --quiet origin/${{ github.base_ref }} -- packages/web || echo "changes-detected"
       - name: Skip build if no changes
         if: steps.changes.outputs.changes-detected != 'true'

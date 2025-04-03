@@ -8,9 +8,12 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "test-coverage": "vitest --coverage",
+    "test-watch": "vitest --watch"
   },
   "dependencies": {
+    "@testing-library/dom": "^10.4.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -25,6 +28,7 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
+    "happy-dom": "^17.4.4",
     "jsdom": "^26.0.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",

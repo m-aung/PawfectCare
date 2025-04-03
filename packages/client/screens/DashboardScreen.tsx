@@ -9,7 +9,7 @@ export default function DashboardScreen({ navigation }: any) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to the Dashboard!</Text>
-      <Text style={styles.subtitle}>Manage your pet care services here.</Text>
+      <Text style={styles.subtitle}>🐾 Manage your pet care services here. 🐾</Text>
       <Button title="Logout" onPress={handleLogout} />
     </View>
   );

@@ -18,8 +18,8 @@ jobs:
       - name: Check for changes in web
         id: changes
         run: |
-          git fetch origin main --depth=1
-          git diff --quiet origin/main -- packages/web || echo "changes-detected"
+          git fetch origin ${{ github.base_ref }} -- packages/web --depth=1
+          git diff --quiet origin/${{ github.base_ref }} -- packages/web || echo "changes-detected"
       - name: Skip tests if no changes
         if: steps.changes.outputs.changes-detected != 'true'
         run: echo "No changes detected in packages/web. Skipping tests."
@@ -55,8 +55,8 @@ jobs:
       - name: Check for changes in web
         id: changes
         run: |
-          git fetch origin main --depth=1
-          git diff --quiet origin/main -- packages/web || echo "changes-detected"
+          git fetch origin ${{ github.base_ref }} -- packages/web --depth=1
+          git diff --quiet origin/${{ github.base_ref }} -- packages/web || echo "changes-detected"
       - name: Skip build if no changes
         if: steps.changes.outputs.changes-detected != 'true'
         run: echo "No changes detected in packages/web. Skipping build."

@@ -18,8 +18,8 @@ jobs:
       - name: Check for changes in client
         id: changes
         run: |
-          git fetch origin main --depth=1
-          git diff --quiet origin/main -- packages/client || echo "changes-detected"
+          git fetch origin ${{ github.base_ref }} -- packages/client --depth=1
+          git diff --quiet origin/${{ github.base_ref }} -- packages/client || echo "changes-detected"
       - name: Skip tests if no changes
         if: steps.changes.outputs.changes-detected != 'true'
         run: echo "No changes detected in packages/client. Skipping tests."
@@ -55,8 +55,8 @@ jobs:
       - name: Check for changes in client
         id: changes
         run: |
-          git fetch origin main --depth=1
-          git diff --quiet origin/main -- packages/client || echo "changes-detected"
+          git fetch origin ${{ github.base_ref }} -- packages/client --depth=1
+          git diff --quiet origin/${{ github.base_ref }} -- packages/client || echo "changes-detected"
       - name: Skip build if no changes
         if: steps.changes.outputs.changes-detected != 'true'
         run: echo "No changes detected in packages/client. Skipping build."

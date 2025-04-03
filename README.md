@@ -2,5 +2,5 @@
 
 [![Client Main Build](https://github.com/m-aung/PawfectCare/actions/workflows/client-main-pipeline.yml/badge.svg?event=push)](https://github.com/m-aung/PawfectCare/actions)
 
-[![Web Main Build Status](https://github.com/m-aung/PawfectCare/actions/workflows/web-main-pipeline.yml/badge.svg?event=push)](https://github.com/m-aung/PawfectCare/actions)
+[![Web Main Build](https://github.com/m-aung/PawfectCare/actions/workflows/web-main-pipeline.yml/badge.svg?event=push)](https://github.com/m-aung/PawfectCare/actions)
 

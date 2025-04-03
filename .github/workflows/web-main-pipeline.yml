@@ -1,10 +1,7 @@
-name: CI/CD for Web
+name: main build for Web
 
 on:
   push:
-    branches:
-      - master
-  pull_request:
     branches:
       - master
 
@@ -12,21 +9,10 @@ jobs:
   test:
     name: Run Tests for Web
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
     steps:
       # Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v3
-
-      # Check if files in packages/web have changed
-      - name: Check for changes in web
-        id: changes
-        run: |
-          git fetch origin ${{ github.base_ref }} --depth=1
-          git diff --quiet origin/${{ github.base_ref }} -- packages/web || echo "changes-detected"
-      - name: Skip tests if no changes
-        if: steps.changes.outputs.changes-detected != 'true'
-        run: echo "No changes detected in packages/web. Skipping tests."
 
       # Set up Node.js
       - name: Set up Node.js
@@ -49,22 +35,11 @@ jobs:
     name: Build Web
     runs-on: ubuntu-latest
     needs: test
-    if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
 
     steps:
       # Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v3
-
-      # Check if files in packages/web have changed
-      - name: Check for changes in web
-        id: changes
-        run: |
-          git fetch origin ${{ github.base_ref }} --depth=1
-          git diff --quiet origin/${{ github.base_ref }} -- packages/web || echo "changes-detected"
-      - name: Skip build if no changes
-        if: steps.changes.outputs.changes-detected != 'true'
-        run: echo "No changes detected in packages/web. Skipping build."
 
       # Set up Node.js
       - name: Set up Node.js

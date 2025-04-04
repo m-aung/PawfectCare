@@ -52,5 +52,11 @@ describe('App Component', () => {
 
     // Check if the count is incremented again
     expect(button).toHaveTextContent('count is 2');
+
+    // Simulate 3rd button click
+    fireEvent.click(button);
+
+    // Check if the count is incremented again
+    expect(button).toHaveTextContent('count is 3');
   });
 });

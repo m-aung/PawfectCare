@@ -3,12 +3,13 @@ name: PR build for Web
 on:
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   test:
     name: Run Tests for Web
     runs-on: ubuntu-latest
+    timeout-minutes: 60 # test running for 60 minutes should be enough
     steps:
       # Checkout the repository
       - name: Checkout code

@@ -10,7 +10,7 @@ describe('DashboardScreen', () => {
     expect(getByText('Welcome to the Dashboard!')).toBeTruthy();
 
     // Check if the subtitle is rendered
-    expect(getByText('Manage your pet care services here.')).toBeTruthy();
+    expect(getByText('🐾 Manage your pet care services here. 🐾')).toBeTruthy();
   });
 
   it('navigates to the Auth screen on logout', () => {
